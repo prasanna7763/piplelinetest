@@ -12,11 +12,12 @@ stages {
             }
         }
 
-stage('build with maven'){
-        withMaven(maven: 'mvn') {
-            sh "mvn clean package"
-        }
-    }
+ stage("Build the code") {
+           
+           steps{
+               sh 'mvn clean package'
+           }
+       }
        
     
   
